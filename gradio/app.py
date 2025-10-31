@@ -2,8 +2,8 @@ import gradio as gr
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # Load your model
-tokenizer = AutoTokenizer.from_pretrained("mian21/flan-t5-bsae-CUSTOM-TRAINED")
-model = AutoModelForSeq2SeqLM.from_pretrained("mian21/flan-t5-bsae-CUSTOM-TRAINED")
+tokenizer = AutoTokenizer.from_pretrained("mian21/flan-t5-small-label-smooth-balanced")
+model = AutoModelForSeq2SeqLM.from_pretrained("mian21/flan-t5-small-label-smooth-balanced")
 
 def predict(text):
     inputs = tokenizer(text, return_tensors="pt")

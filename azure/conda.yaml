@@ -1,0 +1,13 @@
+name: model-env
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.8
+    - pip
+    - pip:
+        - azureml-defaults
+        - transformers==4.35.0
+        - torch==2.1.0
+        - inference-schema
+        - sentencepiece
