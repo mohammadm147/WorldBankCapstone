@@ -5,7 +5,7 @@ def init():
     global model, tokenizer
 
     # define model/tokenizer path
-    modelDir = os.environ["AZUREML_MODEL_DIR"]
+    modelDir = os.path.join(os.environ["AZUREML_MODEL_DIR"], "flan-t5-small-label-smooth-balanced")
     model = AutoModelForSeq2SeqLM.from_pretrained(modelDir)
     tokenizer = AutoTokenizer.from_pretrained(modelDir)
     model.eval()
